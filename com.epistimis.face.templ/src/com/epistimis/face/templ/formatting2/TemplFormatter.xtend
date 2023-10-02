@@ -6,16 +6,16 @@
  */
 package com.epistimis.face.templ.formatting2
 
-import com.epistimis.face.templ.services.TemplGrammarAccess
+//import com.epistimis.face.templ.services.TemplGrammarAccess
 import com.epistimis.face.templ.templ.TemplateSpecification
 import com.epistimis.face.templ.templ.UsingExternalTemplateStatement
-import com.google.inject.Inject
+//import com.google.inject.Inject
 import org.eclipse.xtext.formatting2.AbstractFormatter2
 import org.eclipse.xtext.formatting2.IFormattableDocument
 
 class TemplFormatter extends AbstractFormatter2 {
 	
-	@Inject extension TemplGrammarAccess
+//	@Inject extension TemplGrammarAccess
 
 	def dispatch void format(TemplateSpecification templateSpecification, extension IFormattableDocument document) {
 		// TODO: format HiddenRegions around keywords, attributes, cross references, etc. 
