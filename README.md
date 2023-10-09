@@ -1,8 +1,6 @@
-# com.epistimis.face.templ.parent
-FACE Templating grammar
+# FACE Templating Language
 
-The Future Airborne Capability Environment (FACE) work originally commissioned by the US Navy and eventually supported by the USAF and USArmy.  
-Interest in the data definition portion generally resulted in a decision to split UDDL out of FACE for general use. This repo thus depends on 
+The Future Airborne Capability Environment (FACE) work originally commissioned by the US Navy and eventually supported by the USAF and USArmy.  Interest in the data definition portion generally resulted in a decision to split UDDL out of FACE for general use. This repo thus depends on 
 companion repos [UDDL](https://github.com/Epistimis/com.epistimis.uddl.parent) and [UDDL Query Language](https://github.com/Epistimis/com.epistimis.uddl.query.parent).
 There isn't a build dependency with them yet - there will be.
 
