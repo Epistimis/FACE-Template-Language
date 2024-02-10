@@ -2,6 +2,9 @@ grammar com.epistimis.face.templ.Templ with org.eclipse.xtext.common.Terminals
 
 generate templ "http://www.epistimis.com/face/templ/Templ"
 
+// TODO: 2 rules partially disabled: DesignatedEntityTypeReferencePath and ExplicitEntityTypeReferenceJoinPath
+// These need to be addresses to have full support
+
 TemplateSpecification:
 	(usingExternalTemplateStatement+=UsingExternalTemplateStatement)*
 	structuredTemplateElementTypeDecl+=StructuredTemplateElementTypeDecl
@@ -216,12 +219,14 @@ DesignatedEntityEnumerationTypeCharacteristicReference:
 	characteristicRef=QueryProjectedEnumerationTypeCharacteristicReference |
 	QueryProjectedEnumerationTypeCharacteristicReferenceOrAlias;
 
+// TODO: Partially disable this to get past ambiguity caused by this and ExplicitEntityTypeReferenceJoinPath
 DesignatedEntityTypeReferencePath:
-	(joinPath=ExplicitEntityTypeReferenceJoinPath)? typeRef=DesignatedEntityTypeReference;
+	/*(joinPath=ExplicitEntityTypeReferenceJoinPath)?*/ typeRef=DesignatedEntityTypeReference;
 
+// TODO: Partially disable this to get past ambiguity caused by this and DesignatedEntityTypeReferencePath
 ExplicitEntityTypeReferenceJoinPath:
 	(typeRef+=JoinPathEntityTypeReference
-	PERIOD)  (typeRef+=JoinPathEntityTypeReference PERIOD)*;
+	PERIOD) ; // (typeRef+=JoinPathEntityTypeReference PERIOD)*;
 
 JoinPathEntityTypeReference:
 	QualifiedEntityTypeReference;
