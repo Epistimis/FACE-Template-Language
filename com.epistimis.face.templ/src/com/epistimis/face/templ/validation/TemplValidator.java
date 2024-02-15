@@ -63,7 +63,13 @@ public class TemplValidator extends AbstractTemplValidator {
 	 */
 	QualifiedName containerName;
 	
-	public TemplValidator(QualifiedName ctr) {
+	// NOTE: Use default constructor for injection purposes
+	
+	/**
+	 * Before each use, reinitialize the validator for the current Template container.
+	 * @param ctr The QN of the UopTemplate containing the Template specification
+	 */
+	public void init(QualifiedName ctr) {
 		containerName = ctr;
 	}
 
