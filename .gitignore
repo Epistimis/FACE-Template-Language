@@ -13,5 +13,6 @@
 **/bin/*
 **/.gradle/*
 **/langium/*
-**/*.laumch
+**/gradle/*
+**/*.launch
 **/*.swp
