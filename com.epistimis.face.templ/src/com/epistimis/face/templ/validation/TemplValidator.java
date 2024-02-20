@@ -10,7 +10,6 @@ import java.text.MessageFormat;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import org.eclipse.xtext.naming.IQualifiedNameProvider;
 import org.eclipse.xtext.naming.QualifiedName;
 import org.eclipse.xtext.validation.Check;
 
@@ -18,7 +17,6 @@ import com.epistimis.face.templ.templ.MainEquivalentEntityTypeTemplateMethodDecl
 import com.epistimis.face.templ.templ.MainTemplateMethodDecl;
 import com.epistimis.face.templ.templ.TemplPackage;
 import com.epistimis.face.templ.templ.TemplateSpecification;
-import com.google.inject.Inject;
 /**
  * This class contains custom validation rules. 
  *
